@@ -1,10 +1,93 @@
 import '../style/Landing.css';
+import React from "react";
 import Lottie from "lottie-react";
-import animationData from "../assets/animation_program.json";
 import WaveGuy from "../assets/ManWaving.json";
-import { useRef } from 'react';
+import Bg2 from "../assets/Background2.json";
+import {motion} from "framer-motion";
+import Plx from "react-plx";
 function LandingPage() {
-  const phoneAnimation = useRef();
+ const parallaxData = [
+  {
+    start: 0,
+    end: 300,
+    properties: [
+      {
+        startValue: 1,
+        endValue: 1.2,
+        property: "scale",
+
+      },
+      {
+        startValue: -100,
+        endValue: 200,
+        property: "translateY",
+      },
+    ],
+  },
+];
+const parallaxDataLiving = [
+  {
+    start: 0,
+    end: 800,
+    properties: [
+      {
+        startValue: 10,
+        endValue: 1,
+        property: "scale",
+
+      },
+      {
+        startValue: 0,
+        endValue: 1,
+        property: "opacity",
+      },
+      {
+        startValue:0,
+        endValue: 10,
+        property: "translateY",
+      },
+
+    ],
+  },
+];
+const parallaxDataI = [
+  {
+    start: 0,
+    end: 1500,
+    properties: [
+      {
+        startValue: -1,
+        endValue: 1,
+        property: "opacity",
+      },
+      // {
+      //   startValue:0,
+      //   endValue: 10,
+      //   property: "translateY",
+      // },
+
+    ],
+  },
+];
+const parallaxDataI2 = [
+  {
+    start: 0,
+    end: 100,
+    properties: [
+      {
+        startValue: 0,
+        endValue: 1,
+        property: "opacity",
+      },
+      // {
+      //   startValue:5,
+      //   endValue: 0,
+      //   property: "translateX",
+      // },
+
+    ],
+  },
+];
 
   return (
 
@@ -24,16 +107,42 @@ function LandingPage() {
 </svg>
         </div>
         </navbar>
-        <div class="WaveGuy">
-        <Lottie animationData={WaveGuy} />
-        </div>
-        <h1 class="mainLandingText">Hi! I'm <span class="text-shadow-pop-top">Leonid</span></h1>
-      <div className='LottieDiv'>
-      <Lottie lottieRef={phoneAnimation}animationData={animationData} />
+    
+        <div class="lottie-bg">
+        <Lottie animationData={WaveGuy} className='waveGuyBg' />
+       </div>
+      
+       <Plx className="MyAwesomeParallax" parallaxData={parallaxData}>
 
+        <motion.h1 animate={{scale:1}} initial={{scale:0}} class="mainLandingText">Hi!  I'm Leonid.</motion.  h1>
+      </Plx>
+      <div className='LottieDiv'>
+      <Plx className="MyAwesomeParallax" parallaxData={parallaxDataI}>
+        <div class="lottie-bg bg2">
+        <Lottie animationData={Bg2} class="bg-Lottie"/>
+        </div>
+        </Plx>
+        <Plx  parallaxData={parallaxDataI2}>
+        <div class="contentLandingPage">
+      <h3 class="Important">"I write<br/>
+      Code. That Works."
+      <br/>
+      <button class="btn btn-primary">Check out my recent projects</button>
+      </h3>
+      
+      </div>
+      </Plx>
+      </div>
+      <div className="AnotherSection">
+       <Plx className="MyAwesomeParallaxLiving" parallaxData={parallaxDataLiving}>
+      <h2 class="Living">What Do I do for a Living?</h2>
+     
+
+      </Plx>
+      
       </div>
       </div>
-       
+      
      
     
   );
