@@ -45,7 +45,7 @@ z-index: 2;
 }
 
         .lottie-bg {
-        z-index: -2;
+        z-index: -3;
         
         left: 0;
         right: 0;
@@ -91,7 +91,7 @@ z-index: 2;
         width:100%;
 }
 .bg-Lottie{
-       perspective: 10000px;
+       /* perspective: 10000px; */
         padding-bottom:200px;
 }
 @keyframes gradientAnimation {
@@ -121,10 +121,10 @@ text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
    right:0;
    left:0;
    font-weight: bold;
-   background: linear-gradient(45deg, #d3d3d3, #0f1b4471);
+   background: linear-gradient(45deg, #000000, #020a2571);
         -webkit-background-clip: text; /* For Safari */
         color: transparent;
-        text-shadow: 1px 1px 2px hsla(0, 0%, 100%, 0.623);
+        text-shadow: 1px 1px 2px hsl(0, 0%, 100%);
         animation: gradientAnimation 2s linear infinite;
              
 }

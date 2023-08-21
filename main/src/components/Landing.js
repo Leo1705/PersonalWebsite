@@ -118,14 +118,14 @@ const parallaxDataI2 = [
       </Plx>
       <div className='LottieDiv'>
       <Plx className="MyAwesomeParallax" parallaxData={parallaxDataI}>
-        <div class="lottie-bg bg2">
+        <div class="lottie-bg2 bg2">
         <Lottie animationData={Bg2} class="bg-Lottie"/>
         </div>
         </Plx>
         <Plx  parallaxData={parallaxDataI2}>
         <div class="contentLandingPage">
       <h3 class="Important">"I write<br/>
-      Code. That Works."
+      Code That Works."
       <br/>
       <button class="btn btn-primary">Check out my recent projects</button>
       </h3>

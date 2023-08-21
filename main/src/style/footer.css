@@ -1,0 +1,13 @@
+.containerFooter{
+   margin-top:150px;
+   
+}
+.iconsLeft > svg{
+margin:10px;
+transform: scale(0.8);
+}
+.messageEnd{
+    text-align: center;
+    font-size:12px;
+    color:grey;
+}
